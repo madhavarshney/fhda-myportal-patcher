@@ -88,10 +88,16 @@ if (DEBUG_MODE) {
 }
 
 /**
- * Delete bad cookies on load when not debugging
+ * Delete bad cookies on extension startup when not in debug mode
  */
 if (!DEBUG_MODE) {
   chrome.runtime.onInstalled.addListener(() => deleteBadCookies())
+  chrome.runtime.onStartup.addListener(() => deleteBadCookies())
+  chrome.management.onEnabled.addListener(({ name }) => {
+    if (name === 'FHDA MyPortal Patcher') {
+      deleteBadCookies()
+    }
+  })
 }
 
 log(`FHDA MyPortal Patcher booted up, debug mode is ${DEBUG_MODE ? 'on' : 'off'}.`)

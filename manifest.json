@@ -6,7 +6,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["alarms", "cookies"],
+  "permissions": ["alarms", "cookies", "management"],
   "host_permissions": ["*://fhda.edu/", "*://.fhda.edu/", "*://*.fhda.edu/"],
   "action": {}
 }
