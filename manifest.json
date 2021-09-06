@@ -1,0 +1,12 @@
+{
+  "name": "FHDA MyPortal Patcher",
+  "description": "Patches the Foothill-De Anza MyPortal & SSB for common issues such as SAML errors.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["alarms", "cookies"],
+  "host_permissions": ["*://fhda.edu/", "*://.fhda.edu/", "*://*.fhda.edu/"],
+  "action": {}
+}
