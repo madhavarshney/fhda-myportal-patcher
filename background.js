@@ -91,7 +91,7 @@ if (DEBUG_MODE) {
  * Delete bad cookies on load when not debugging
  */
 if (!DEBUG_MODE) {
-  deleteBadCookies()
+  chrome.runtime.onInstalled.addListener(() => deleteBadCookies())
 }
 
 log(`FHDA MyPortal Patcher booted up, debug mode is ${DEBUG_MODE ? 'on' : 'off'}.`)
