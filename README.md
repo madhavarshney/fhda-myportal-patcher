@@ -18,4 +18,4 @@ Instructions for Chrome:
 
 ## License
 
-[MIT License](LICENSE.md), built by Madhav Varshney.
+[MIT License](LICENSE), built by Madhav Varshney.
